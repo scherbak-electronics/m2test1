@@ -1,0 +1,16 @@
+<?php
+$_items = $block->getMusicCollection()->getItems();
+?>
+<div class="block se-music">
+    <div class="title"><strong>Music</strong></div>
+    <div class="content">
+        <ul>
+            <?php foreach ($_items as $_item):?>
+                <li>
+                    <strong><?php echo $_item->getArtist() . ' - ' . $_item->getTitle(); ?></strong><br>
+                    <small><?php echo $_item->getContent(); ?></small>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
